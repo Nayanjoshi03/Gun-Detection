@@ -1,0 +1,24 @@
+2026-01-31 14:59:29,382 - INFO - Downloading the dataset from kaggle hub 
+2026-01-31 14:59:31,289 - INFO - Dataset downloaded successfully 
+2026-01-31 15:00:14,240 - INFO - Downloading the dataset from kaggle hub 
+2026-01-31 15:00:15,221 - INFO - Dataset downloaded successfully 
+2026-01-31 15:01:01,160 - INFO - Downloading the dataset from kaggle hub 
+2026-01-31 15:01:02,066 - INFO - Dataset downloaded successfully 
+2026-01-31 15:01:02,070 - INFO - Moved images to raw directory 
+2026-01-31 15:01:02,071 - INFO - Moved labels to raw directory 
+2026-01-31 15:30:04,838 - INFO - Logger is set up and running. 
+2026-01-31 15:30:54,579 - INFO - Logger is set up and running. 
+2026-01-31 15:30:54,579 - ERROR - Logger is set up and running. 
+2026-01-31 15:30:54,579 - WARNING - Logger is set up and running. 
+2026-01-31 15:31:24,629 - INFO - Logger is set up and running. 
+2026-01-31 15:31:24,629 - ERROR - Logger error 
+2026-01-31 15:31:24,629 - WARNING - Logger warning. 
+2026-01-31 15:31:42,415 - INFO - Logger is set up and running. 
+2026-01-31 15:31:42,415 - ERROR - Logger error 
+2026-01-31 15:31:42,415 - WARNING - Logger warning. 
+2026-01-31 15:32:05,451 - INFO - Logger is set up and running. 
+2026-01-31 15:32:05,452 - ERROR - Logger error 
+2026-01-31 15:32:05,452 - WARNING - Logger warning. 
+2026-01-31 15:35:24,145 - INFO - Logger is set up and running. 
+2026-01-31 15:35:24,145 - ERROR - Logger error 
+2026-01-31 15:35:24,145 - WARNING - Logger warning. 

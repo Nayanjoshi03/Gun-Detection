@@ -1,0 +1,11 @@
+2026-02-03 16:06:54,505 - INFO - Logger is set up and running. 
+2026-02-03 16:33:41,948 - INFO - Data Processing Initialized... 
+2026-02-03 16:33:41,951 - INFO - loding data for index 0 
+2026-02-03 16:33:41,951 - INFO - Image path : artifact/raw/images\1.jpeg 
+2026-02-03 16:33:42,029 - ERROR - Error while loading the data tensor() got an unexpected keyword argument 'dtypes' 
+2026-02-03 16:36:21,958 - INFO - Data Processing Initialized... 
+2026-02-03 16:36:21,958 - INFO - loding data for index 0 
+2026-02-03 16:36:21,959 - INFO - Image path : artifact/raw/images\1.jpeg 
+2026-02-03 16:36:34,272 - INFO - Data Processing Initialized... 
+2026-02-03 16:36:34,274 - INFO - loding data for index 0 
+2026-02-03 16:36:34,274 - INFO - Image path : artifact/raw/images\1.jpeg 
