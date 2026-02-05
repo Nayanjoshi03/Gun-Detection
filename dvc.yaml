@@ -1,0 +1,16 @@
+stages:
+  data_ingestion:
+    cmd: python -m src.data_ingestion
+    deps:
+      - src/data_ingestion.py
+    outs:
+      - artifact/raw/images
+      - artifact/raw/labels
+  
+  model_training:
+    cmd: python -m src.model_training
+    deps:
+      - src/model_training.py
+      - artifact/raw
+    outs:
+      - artifact/models/fasterrcnn.pth

@@ -11,6 +11,7 @@ class DataIngestion():
     def __init__(self,dataset_name:str,target_dir:str):
         self.dataset_name=dataset_name
         self.target_dir=target_dir
+    
     def create_raw_dir(self):
         raw_dir=os.path.join(self.target_dir,'raw')
         if not os.path.exists(raw_dir):
@@ -28,19 +29,48 @@ class DataIngestion():
                 logger.info('Extracting the zip file')
                 with zipfile.ZipFile(path,'r') as zip_ref :
                     zip_ref.extractall(path) 
-            image_folder=os.path.join(path,'Images') 
-            labels_folder=os.path.join(path,'Labels')
+            image_folder=os.path.join(path,'images') 
+            labels_folder=os.path.join(path,'labels')
+            dest_images = os.path.join(raw_dir, 'images')
+            dest_labels = os.path.join(raw_dir, 'labels')
+
+            def _move_contents(src, dst):
+                os.makedirs(dst, exist_ok=True)
+                for name in os.listdir(src):
+                    s = os.path.join(src, name)
+                    d = os.path.join(dst, name)
+                    # if destination exists, overwrite files
+                    if os.path.exists(d):
+                        if os.path.isdir(d):
+                            shutil.rmtree(d)
+                        else:
+                            os.remove(d)
+                    shutil.move(s, d)
+
             if os.path.exists(image_folder):
-                shutil.move(image_folder,os.path.join(raw_dir,'Images'))
-                logger.info('Moved images to raw directory') 
+                # If destination already exists, move the contents instead of moving the folder itself
+                if os.path.exists(dest_images):
+                    logger.info('Destination images directory exists; merging contents')
+                    _move_contents(image_folder, dest_images)
+                else:
+                    shutil.move(image_folder, dest_images)
+                logger.info('Images moved to raw directory')
             else:
-                logger.info('Images folder does not exist')
-                
+                logger.error('Images folder does not exist; creating empty images directory')
+                os.makedirs(dest_images, exist_ok=True)
+                logger.info('Images folder created')
+
             if os.path.exists(labels_folder):
-                shutil.move(labels_folder,os.path.join(raw_dir,'Labels'))
-                logger.info('Moved labels to raw directory') 
+                if os.path.exists(dest_labels):
+                    logger.info('Destination labels directory exists; merging contents')
+                    _move_contents(labels_folder, dest_labels)
+                else:
+                    shutil.move(labels_folder, dest_labels)
+                logger.info('Labels moved to raw directory')
             else:
-                logger.info('Labels folder does not exist')
+                logger.error('Labels folder does not exist; creating empty labels directory')
+                os.makedirs(dest_labels, exist_ok=True)
+                logger.info('Labels folder created')
         except  Exception as e:
             logger.error('Error while extracting directory.. ',e)
             raise CustomException("Failed while Extracting the directory",e)
@@ -51,6 +81,7 @@ class DataIngestion():
             path=kagglehub.dataset_download(self.dataset_name)
             logger.info('Dataset downloaded successfully')
             self.extract_images_labels(path,raw_dir)
+            logger.info(f"data saved in {path}")
         except Exception as e:
             logger.error('Error while downloading dataset.. ',e)
             raise CustomException("Failed to download dataset from kaggle hub",e)
@@ -65,4 +96,5 @@ class DataIngestion():
 
 if __name__=='__main__':
     obj=DataIngestion(dataset_name=DATASET_NAME,target_dir=TARGET_DIR)
+    
     obj.run()           

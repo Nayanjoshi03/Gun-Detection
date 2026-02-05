@@ -1,0 +1,26 @@
+2026-02-04 17:58:26,563 - INFO - Create the artifact\raw 
+2026-02-04 17:58:26,563 - INFO - Downloading the dataset from kaggle hub 
+2026-02-04 17:58:32,986 - INFO - Dataset downloaded successfully 
+2026-02-04 17:58:32,988 - INFO - Images moved to raw directory 
+2026-02-04 17:58:32,989 - INFO - Labels moved to raw directory 
+2026-02-04 17:58:32,989 - INFO - data saved in C:\Users\Nayan joshi\.cache\kagglehub\datasets\issaisasank\guns-object-detection\versions\1 
+2026-02-04 17:58:50,693 - INFO - Model Architecture initalized ... 
+2026-02-04 17:58:50,695 - INFO - Model moved to device 
+2026-02-04 17:58:50,695 - INFO - optimiser initialized ... 
+2026-02-04 17:58:50,825 - INFO - Data Processing Initialized... 
+2026-02-04 17:58:50,829 - INFO - Data splitted successfully 
+2026-02-04 17:58:50,829 - INFO - starting epoch :0 
+2026-02-04 17:58:50,835 - INFO - loding data for index 2 
+2026-02-04 17:58:50,835 - INFO - Image path : artifact/raw\images\100.jpeg 
+2026-02-04 17:58:50,860 - INFO - loding data for index 3 
+2026-02-04 17:58:50,860 - INFO - Image path : artifact/raw\images\101.jpeg 
+2026-02-04 17:58:50,863 - INFO - loding data for index 4 
+2026-02-04 17:58:50,864 - INFO - Image path : artifact/raw\images\102.jpeg 
+2026-02-04 18:00:27,217 - INFO - loding data for index 1 
+2026-02-04 18:00:27,242 - INFO - Image path : artifact/raw\images\10.jpeg 
+2026-02-04 18:01:00,832 - INFO - loding data for index 0 
+2026-02-04 18:01:00,842 - INFO - Image path : artifact/raw\images\1.jpeg 
+2026-02-04 18:01:03,960 - INFO - type of validateion loss <class 'list'> 
+2026-02-04 18:01:04,121 - INFO - val_loss : [{'boxes': tensor([[ 12.3425,  86.9788,  44.0468, 125.7625],
+        [  0.6784,  82.6572,  42.3756, 113.0799]]), 'labels': tensor([1, 1]), 'scores': tensor([0.0537, 0.0504])}] 
+2026-02-04 18:01:04,632 - INFO - model saved succesfully .. 
