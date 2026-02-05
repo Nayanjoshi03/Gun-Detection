@@ -1,0 +1,9 @@
+/artifact
+/build
+/dist
+/node_modules
+/logs
+/tensorboard_logs
+/.vscode
+/.idea
+/data
