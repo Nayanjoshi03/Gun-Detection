@@ -4,13 +4,13 @@ stages:
     deps:
       - src/data_ingestion.py
     outs:
-      - artifact/raw/images
-      - artifact/raw/labels
+      - artifacts/raw/Images
+      - artifacts/raw/Labels
   
   model_training:
     cmd: python -m src.model_training
     deps:
       - src/model_training.py
-      - artifact/raw
+      - artifacts/raw
     outs:
-      - artifact/models/fasterrcnn.pth
+      - artifacts/models/fasterrcnn.pth

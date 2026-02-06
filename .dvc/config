@@ -1,0 +1,4 @@
+[core]
+    remote = aws
+['remote "aws"']
+    url = https://ap-south-1.console.aws.amazon.com/s3/buckets/gun-project-data?region=ap-south-1
